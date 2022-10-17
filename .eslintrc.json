@@ -1,0 +1,29 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended", "standard", "plugin:prettier/recommended"],
+    "overrides": [],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": "error",
+        "no-console": "off",
+        "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+        "import/order": [
+            "error",
+            {
+                "newlines-between": "never",
+                "groups": [
+                    ["builtin", "external"],
+                    ["internal", "parent", "sibling", "index"]
+                ]
+            }
+        ],
+        "semi": "off"
+    }
+}
